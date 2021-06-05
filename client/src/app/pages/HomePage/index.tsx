@@ -1,14 +1,26 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { StyledHomepage, StyledSectionWrapper } from './StyledHomepage';
+import { GetOnions, GetScrapes } from './components';
 
 export function HomePage() {
   return (
     <>
       <Helmet>
         <title>Home Page</title>
-        <meta name="description" content="A Boilerplate application homepage" />
+        <meta
+          name="description"
+          content="ThreatenMe - Prevent the next tragedy"
+        />
       </Helmet>
-      <span>HomePage container</span>
+      <StyledHomepage>
+        <StyledSectionWrapper>
+          <GetOnions />
+        </StyledSectionWrapper>
+        <StyledSectionWrapper>
+          <GetScrapes />
+        </StyledSectionWrapper>
+      </StyledHomepage>
     </>
   );
 }
