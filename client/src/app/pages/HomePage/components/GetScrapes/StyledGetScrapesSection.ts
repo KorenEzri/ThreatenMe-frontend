@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 export const ScrapesContainer = styled.div`
-  height: 350px;
+  height: 450px;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   background-color: black;
@@ -181,6 +182,8 @@ export const StyledScrapesWrapper = styled.div`
   }
 `;
 export const StyledWindowContainer = styled.div`
+  .background-wrapper {
+  }
   display: flex;
   overflow-x: hidden !important;
   flex-direction: column;
@@ -223,8 +226,9 @@ export const StyledSubtitle = styled.div`
 `;
 
 export const ScrapeAWebSiteInput = styled.div`
-  width: 100%;
+  width: 95%;
   margin-top: -20px;
+  margin-left: 20px;
   input {
     width: 33.3%;
     padding: 12px;
@@ -270,12 +274,11 @@ export const ScrapeItButton = styled.button`
 
 export const PastbinsContaienr = styled.div`
   display: flex;
-  width: 1000px;
   overflow: hidden;
   img {
     cursor: pointer;
-    width: 480px;
-    height: 320px;
+    width: 390px;
+    height: 240px;
     &:hover {
       --angle: 0deg;
       border: 3px solid;
@@ -299,15 +302,11 @@ export const PastbinsContaienr = styled.div`
   }
 `;
 export const StrongholdButton = styled.div`
-  width: 100%;
-  height: 310px;
   margin: 10px;
   margin-top: 30px;
   background-color: white;
 `;
 export const DeeppasteButton = styled.div`
-  width: 100%;
-  height: 310px;
   margin: 10px;
   margin-top: 30px;
   background-color: white;

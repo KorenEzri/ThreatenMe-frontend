@@ -59,10 +59,7 @@ export function GetScrapes() {
               Anonymously.
             </StyledSubtitle>
             <ScrapeAWebSiteInput>
-              <input
-                type="text"
-                placeholder="22tojepkdafgt7id.onion/all"
-              />
+              <input type="text" placeholder="22tojepkdafgt7id.onion/all" />
               <input type="text" placeholder="HTML5 Selector" />
               <input type="text" placeholder="Attribute (optional)" />
               <ScrapeItButton>Scrape it.</ScrapeItButton>

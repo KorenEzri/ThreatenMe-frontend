@@ -214,9 +214,8 @@ export function ScraperWindow() {
     loop();
   };
   return (
-    <div>
-      <canvas id="canvas" ref={canvasRef}>
-      </canvas>
+    <div className="background-wrapper">
+      <canvas id="canvas" ref={canvasRef}></canvas>
     </div>
   );
 }
