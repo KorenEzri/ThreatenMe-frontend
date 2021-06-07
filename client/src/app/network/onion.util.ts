@@ -20,3 +20,8 @@ export const scrapeWebsite = async (
     return 'ERROR';
   }
 };
+export const getScrapes = (website: string) => {
+  if (website === 'deeppaste') {
+  } else if (website === 'stronghold') {
+  }
+};

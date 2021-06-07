@@ -6,7 +6,10 @@ export const routes = {
     urls: `${baseURL}/onion/url`,
     allUrls: `${baseURL}/onion/allurls`,
     scrape: `${baseURL}/onion/scrape`,
-    one: `${baseURL}/onion/`,
+    pastes: {
+      stronghold: `${baseURL}/onion/stronghold`,
+      deeppaste: `${baseURL}/onion/deeppaste`,
+    },
   },
   validations: {
     username: `${baseURL}/validation/validateusername`,
