@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ScraperWindow } from './ScraperWindow';
 import {
   StyledScrapesWrapper,
   ScrapesContainer,
@@ -62,7 +61,7 @@ export function GetScrapes() {
               <input type="text" placeholder="22tojepkdafgt7id.onion/all" />
               <input type="text" placeholder="HTML5 Selector" />
               <input type="text" placeholder="Attribute (optional)" />
-              <ScrapeItButton>Scrape it.</ScrapeItButton>
+              <ScrapeItButton>Scrape now</ScrapeItButton>
             </ScrapeAWebSiteInput>
           </StyledSpecialityWindow>
           <StyledScraperWindow>
@@ -80,7 +79,6 @@ export function GetScrapes() {
             </PastbinsContaienr>
           </StyledScraperWindow>
         </StyledInline>
-        <ScraperWindow />
       </StyledWindowContainer>
     </>
   );

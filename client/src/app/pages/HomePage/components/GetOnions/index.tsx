@@ -14,21 +14,21 @@ export function GetOnions() {
     one: any;
     two: any;
   }
-  let timeouts:Timeouts = {
-    one:'',
-    two:'',
-  }
+  let timeouts: Timeouts = {
+    one: '',
+    two: '',
+  };
   useEffect(() => {
-   timeouts.one = setTimeout(() => {
+    timeouts.one = setTimeout(() => {
       setShowSecondTitle(true);
     }, 1500);
     timeouts.two = setTimeout(() => {
       setShowThirdTitle(true);
     }, 3500);
     return () => {
-      clearTimeout(timeouts.one)
-      clearTimeout(timeouts.two)
-    }
+      clearTimeout(timeouts.one);
+      clearTimeout(timeouts.two);
+    };
   }, []);
   return (
     <StyledOnionWrapper>

@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
-export const StyledHomepage = styled.div``;
+export const StyledHomepage = styled.div`
+  overflow-x: hidden;
+`;
 export const StyledSectionWrapper = styled.div`
-  height: 900px;
-  font-size: 70px;
+  overflow-x: hidden;
+  font-size: 60px;
   user-select: none;
 `;
+export const GetPastesContainer = styled.div``;

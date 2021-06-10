@@ -1,6 +1,10 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { StyledHomepage, StyledSectionWrapper } from './StyledHomepage';
+import {
+  StyledHomepage,
+  StyledSectionWrapper,
+  GetPastesContainer,
+} from './StyledHomepage';
 import { GetOnions, GetScrapes } from './components';
 
 export function HomePage() {
@@ -16,9 +20,9 @@ export function HomePage() {
       <StyledHomepage>
         <StyledSectionWrapper>
           <GetOnions />
-        </StyledSectionWrapper>
-        <StyledSectionWrapper>
-          <GetScrapes />
+          <GetPastesContainer>
+            <GetScrapes />
+          </GetPastesContainer>
         </StyledSectionWrapper>
       </StyledHomepage>
     </>

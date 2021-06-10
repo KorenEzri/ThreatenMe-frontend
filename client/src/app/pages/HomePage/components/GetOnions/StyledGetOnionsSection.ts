@@ -2,7 +2,7 @@ import styled from 'styled-components';
 export const StyledOnionWrapper = styled.div`
   margin: auto;
   padding: 10px;
-  width: 70%;
+  width: 100%;
   text-align: left;
   padding-left p {
     letter-spacing: 1px;
@@ -122,7 +122,7 @@ export const StyledThirdOnionTitle = styled.div`
     display: inline-block;
     position: relative;
     padding-bottom: 10px;
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   .hoverCSS3:after {
     content: '';

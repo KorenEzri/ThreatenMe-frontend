@@ -1,11 +1,8 @@
 import styled from 'styled-components';
 export const ScrapesContainer = styled.div`
-  height: 450px;
+  height: 550px;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
   background-color: black;
-  overflow-y: hidden;
   color: white;
   /*waves****************************/
   .box {
@@ -25,8 +22,6 @@ export const ScrapesContainer = styled.div`
     background: #0af;
     width: 1200px;
     height: 1300px;
-    margin-left: -150px;
-    margin-top: -50px;
     transform-origin: 50% 48%;
     border-radius: 43%;
     animation: drift 7000ms infinite linear;
@@ -172,7 +167,6 @@ export const SpanTitleContainer = styled.div`
 export const StyledScrapesWrapper = styled.div`
   margin: auto;
   padding: 10px;
-  width: 70%;
   text-align: left;
   padding-left p {
     letter-spacing: 1px;
@@ -189,19 +183,13 @@ export const StyledWindowContainer = styled.div`
   flex-direction: column;
 `;
 export const StyledScraperWindow = styled.div`
-  height: 350px;
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
   html {
     overflow: hidden;
   }
   canvas {
     cursor: none;
   }
-  margin-top: -60px;
+  margin-top: 80px;
 `;
 export const StyledSpecialityWindow = styled.div`
   height: 420px;
@@ -217,7 +205,7 @@ export const StyledScrapesTitle = styled.div`
 `;
 
 export const StyledSubtitle = styled.div`
-  margin: 12px;
+  margin: 8px;
   color: silver;
   font-weight: bold;
   letter-spacing: 1px;
@@ -226,13 +214,14 @@ export const StyledSubtitle = styled.div`
 `;
 
 export const ScrapeAWebSiteInput = styled.div`
-  width: 95%;
-  margin-top: -20px;
   margin-left: 20px;
+  display: flex;
+  flex-direction: column;
   input {
-    width: 33.3%;
     padding: 12px;
+    margin: 10px;
     font-size: 18px;
+    width: 50%;
     background-color: grey;
     color: white;
     outline: none;
@@ -243,35 +232,53 @@ export const ScrapeAWebSiteInput = styled.div`
     }
   }
 `;
-export const ScrapeItButton = styled.button`
-  box-shadow: inset 0px 1px 0px 0px #c97c75;
-  background: linear-gradient(to bottom, #7d1914 5%, #a11f14 100%);
-  background-color: #7d1914;
-  border-radius: 6px;
-  border: 1px solid #d02718;
+// export const ScrapeItButton = styled.button`
+//   box-shadow: inset 0px 1px 0px 0px #c97c75;
+//   background: linear-gradient(to bottom, #7d1914 5%, #a11f14 100%);
+//   background-color: #7d1914;
+//   border-radius: 6px;
+//   border: 1px solid #d02718;
+//   cursor: pointer;
+//   color: #ffffff;
+//   font-family: Arial;
+//   font-size: 24px;
+//   font-weight: bold;
+//   padding: 14px 126px;
+//   text-decoration: none;
+//   float: right;
+//   width: 100%;
+//   margin-top: -10px;
+//   transition: 500ms;
+//   &:hover {
+//     transition: 500ms;
+//     background: linear-gradient(to bottom, #a11f14 5%, #7d1914 100%);
+//     background-color: #a11f14;
+//   }
+//   &:active {
+//     transition: 500ms;
+//     position: relative;
+//     top: 1px;
+//   }
+// `;
+export const ScrapeItButton = styled.div`
+  border: 1px solid whitesmoke;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  line-height: 55px;
+  letter-spacing: 1.5px;
+  font-size: 18px;
   cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 14px 126px;
-  text-decoration: none;
-  float: right;
-  width: 100%;
-  margin-top: -10px;
+  margin: 12px;
   transition: 500ms;
+  color: white;
   &:hover {
     transition: 500ms;
-    background: linear-gradient(to bottom, #a11f14 5%, #7d1914 100%);
-    background-color: #a11f14;
-  }
-  &:active {
-    transition: 500ms;
-    position: relative;
-    top: 1px;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    color: black;
   }
 `;
-
 export const PastbinsContaienr = styled.div`
   display: flex;
   overflow: hidden;
