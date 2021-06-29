@@ -12,8 +12,8 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 import { GlobalStyle } from 'styles/global-styles';
 
-import { HomePage } from './pages/HomePage/Loadable';
-import { Header, Footer } from './components';
+import { HomePage, View, Stronghold, Onions } from './pages/';
+import { Header } from './components';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
 
@@ -31,6 +31,8 @@ export function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/stronghold" component={Stronghold} />
+        <Route exact path="/onions" component={Onions} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import {
   StyledOnionWrapper,
   StyledOnionTitle,
@@ -10,6 +12,7 @@ import {
 export function GetOnions() {
   const [showSecondTitle, setShowSecondTitle] = useState(false);
   const [showThirdTitle, setShowThirdTitle] = useState(false);
+  const history = useHistory();
   interface Timeouts {
     one: any;
     two: any;
@@ -41,11 +44,17 @@ export function GetOnions() {
             <p>From the deepest of places</p>
           </StyledOnionSecondaryTitle>
           {showThirdTitle && (
-            <StyledThirdOnionTitle>
+            <StyledThirdOnionTitle
+              onClick={async () => {
+                history.push('/onions');
+              }}
+            >
               <span className="hoverCSS3">
-                <ThirdTitleTextWrapper>
-                  At your fingertips.
-                </ThirdTitleTextWrapper>
+                <Link to={'/onions'}>
+                  <ThirdTitleTextWrapper>
+                    At your fingertips.
+                  </ThirdTitleTextWrapper>
+                </Link>
               </span>
             </StyledThirdOnionTitle>
           )}

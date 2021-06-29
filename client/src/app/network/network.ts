@@ -1,6 +1,7 @@
 import axios from 'axios';
 const baseURL = 'http://localhost:8080/api/v1';
-export const network = axios.create({ withCredentials: true, baseURL });
+const scrapeURL = 'http://localhost:8055/api/v1/scrape';
+export const network = axios.create({ baseURL });
 export const routes = {
   onion: {
     urls: `${baseURL}/onion/url`,
@@ -11,6 +12,11 @@ export const routes = {
       deeppaste: `${baseURL}/onion/deeppaste`,
     },
   },
+  database: {
+    stronghold: `${baseURL}/database/pastes?=stronghold`,
+    deeppaste: `${baseURL}/database/pastes?=deeppaste`,
+  },
+  scrape: `${scrapeURL}/scrape`,
   validations: {
     username: `${baseURL}/validation/validateusername`,
     nickname: `${baseURL}/validation/validatenickname`,

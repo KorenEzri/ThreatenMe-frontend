@@ -1,35 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   StyledScrapesWrapper,
   ScrapesContainer,
   SpanTitleContainer,
-  StyledWindowContainer,
   StyledScraperWindow,
-  StyledSpecialityWindow,
-  StyledInline,
   StyledScrapesTitle,
   StyledSubtitle,
-  ScrapeAWebSiteInput,
-  ScrapeItButton,
-  StrongholdButton,
   DeeppasteButton,
   PastbinsContaienr,
 } from './StyledGetScrapesSection';
-import deeppaste from './deeppaste.png';
+import { Form } from './Form';
+import { useHistory } from 'react-router-dom';
 import stronghold from './stronghold.png';
 
-export function GetScrapes() {
-  const [showSecondWindow, setShowSecondWindow] = useState(false);
-  const [showThirdWindow, setShowThirdWindow] = useState(false);
-  interface Timeouts {
-    one: any;
-    two: any;
-  }
-  let timeouts: Timeouts = {
-    one: '',
-    two: '',
-  };
-
+export function GetScrapes({ setError, setShowSpinner, setScrapes }) {
+  const history = useHistory();
   return (
     <>
       <ScrapesContainer>
@@ -47,39 +32,34 @@ export function GetScrapes() {
           </SpanTitleContainer>
         </StyledScrapesWrapper>
       </ScrapesContainer>
-      <StyledWindowContainer>
-        <StyledInline>
-          <StyledSpecialityWindow>
-            <StyledScrapesTitle>Scrapes-o-Matic</StyledScrapesTitle>
-            <StyledSubtitle>
-              The data you need. The data you want. The data you didn't know
-              existed.
-              <br />
-              Anonymously.
-            </StyledSubtitle>
-            <ScrapeAWebSiteInput>
-              <input type="text" placeholder="22tojepkdafgt7id.onion/all" />
-              <input type="text" placeholder="HTML5 Selector" />
-              <input type="text" placeholder="Attribute (optional)" />
-              <ScrapeItButton>Scrape now</ScrapeItButton>
-            </ScrapeAWebSiteInput>
-          </StyledSpecialityWindow>
-          <StyledScraperWindow>
-            <StyledScrapesTitle>Scanalytico</StyledScrapesTitle>
-            <StyledSubtitle>
-              Collaborating together for a better tomorrow.
-            </StyledSubtitle>
-            <PastbinsContaienr>
-              <StrongholdButton>
-                <img src={deeppaste} alt="deep_paste" />
-              </StrongholdButton>
-              <DeeppasteButton>
-                <img src={stronghold} alt="stronghold" />
-              </DeeppasteButton>
-            </PastbinsContaienr>
-          </StyledScraperWindow>
-        </StyledInline>
-      </StyledWindowContainer>
+      <StyledScrapesTitle>Scrapes-o-Matic</StyledScrapesTitle>
+      <StyledSubtitle>
+        The data you need. The data you want. The data you didn't know existed.
+        <br />
+        Anonymously.
+      </StyledSubtitle>
+      <Form
+        setError={setError}
+        setShowSpinner={setShowSpinner}
+        setScrapes={setScrapes}
+      />
+      <StyledScraperWindow>
+        <StyledScrapesTitle>Scanalytico</StyledScrapesTitle>
+        <StyledSubtitle>
+          Collaborating together for a better tomorrow.
+        </StyledSubtitle>
+        <PastbinsContaienr>
+          <DeeppasteButton>
+            <img
+              src={stronghold}
+              alt="stronghold"
+              onClick={() => {
+                history.push('/stronghold');
+              }}
+            />
+          </DeeppasteButton>
+        </PastbinsContaienr>
+      </StyledScraperWindow>
     </>
   );
 }

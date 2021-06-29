@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 export const ScrapesContainer = styled.div`
+  text-align: center;
   height: 550px;
   overflow: hidden;
   background-color: black;
@@ -189,14 +190,7 @@ export const StyledScraperWindow = styled.div`
   canvas {
     cursor: none;
   }
-  margin-top: 80px;
-`;
-export const StyledSpecialityWindow = styled.div`
-  height: 420px;
-`;
-export const StyledInline = styled.div`
-  position: absolute;
-  display: inline;
+  margin-top: 150px;
 `;
 export const StyledScrapesTitle = styled.div`
   color: silver;
@@ -213,78 +207,12 @@ export const StyledSubtitle = styled.div`
   font-size: 22px;
 `;
 
-export const ScrapeAWebSiteInput = styled.div`
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  input {
-    padding: 12px;
-    margin: 10px;
-    font-size: 18px;
-    width: 50%;
-    background-color: grey;
-    color: white;
-    outline: none;
-    &:focus {
-      background-color: #bfbfc1;
-      color: black;
-      border: 1px solid white;
-    }
-  }
-`;
-// export const ScrapeItButton = styled.button`
-//   box-shadow: inset 0px 1px 0px 0px #c97c75;
-//   background: linear-gradient(to bottom, #7d1914 5%, #a11f14 100%);
-//   background-color: #7d1914;
-//   border-radius: 6px;
-//   border: 1px solid #d02718;
-//   cursor: pointer;
-//   color: #ffffff;
-//   font-family: Arial;
-//   font-size: 24px;
-//   font-weight: bold;
-//   padding: 14px 126px;
-//   text-decoration: none;
-//   float: right;
-//   width: 100%;
-//   margin-top: -10px;
-//   transition: 500ms;
-//   &:hover {
-//     transition: 500ms;
-//     background: linear-gradient(to bottom, #a11f14 5%, #7d1914 100%);
-//     background-color: #a11f14;
-//   }
-//   &:active {
-//     transition: 500ms;
-//     position: relative;
-//     top: 1px;
-//   }
-// `;
-export const ScrapeItButton = styled.div`
-  border: 1px solid whitesmoke;
-  width: 200px;
-  height: 60px;
-  text-align: center;
-  line-height: 55px;
-  letter-spacing: 1.5px;
-  font-size: 18px;
-  cursor: pointer;
-  margin: 12px;
-  transition: 500ms;
-  color: white;
-  &:hover {
-    transition: 500ms;
-    border: 1px solid black;
-    background-color: whitesmoke;
-    color: black;
-  }
-`;
 export const PastbinsContaienr = styled.div`
   display: flex;
   overflow: hidden;
   img {
     cursor: pointer;
-    width: 390px;
+    width: 430px;
     height: 240px;
     &:hover {
       --angle: 0deg;
